@@ -11,6 +11,9 @@ module RedmineIssueTabs
     module InstanceMethods
       def get_time_entries
         @time_entries = @issue.time_entries.preload(:user, :activity).order("#{TimeEntry.table_name}.spent_on DESC")
+        unless User.current.allowed_to?(:view_all_time_entries_in_issue, @project)
+          @time_entries = @time_entries.where(user_id: User.current.id)
+        end
       end
     end
   end

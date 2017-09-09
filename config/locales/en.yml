@@ -2,3 +2,4 @@
 en:
   label_issues_tab_history: "History"
   label_issues_tab_comments: "Comments"
+  permission_view_all_time_entries_in_issue: View spent time in issue

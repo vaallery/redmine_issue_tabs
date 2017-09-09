@@ -9,7 +9,7 @@
   <% issue_tabs = [ { name: 'comments', partial: 'redmine_issue_tabs/blank', label: :label_issues_tab_comments },
                     { name: 'history', partial: 'redmine_issue_tabs/blank', label: :label_issues_tab_history },
                     { name: 'changesets', partial: 'redmine_issue_tabs/blank', label: :label_associated_revisions } ]
-  if User.current.allowed_to?(:view_time_entries, @project)
+  if User.current.allowed_to?(:view_all_time_entries_in_issue, @project)||true
     issue_tabs << { name: 'timelog', partial: 'redmine_issue_tabs/timelog', label: :label_spent_time }
   end
   %>

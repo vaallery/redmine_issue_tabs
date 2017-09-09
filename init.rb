@@ -5,6 +5,9 @@ Redmine::Plugin.register :redmine_issue_tabs do
   version '1.1.1'
   url 'https://github.com/pineapple-thief/redmine_issue_tabs'
   author_url 'http://example.com/about'
+  project_module :time_tracking do
+    permission :view_all_time_entries_in_issue, {}
+  end
 end
 
 require 'redmine_issue_tabs/view_hooks'

@@ -1,3 +1,4 @@
 ru:
   label_issues_tab_history: "История"
   label_issues_tab_comments: "Комментарии"
+  permission_view_all_time_entries_in_issue: Просмотр всех трудозатрат в задаче
